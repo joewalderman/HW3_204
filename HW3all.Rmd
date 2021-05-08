@@ -16,6 +16,11 @@ library(here)
 
 
 ```{r}
+data <- read.csv(here("data", "HW3_data.csv")) %>% 
+  clean_names()
+
+options(scipen=999)
+
 # Generic demand functions
 ##P(Q)
 inverse_demand <- function(q, model){
